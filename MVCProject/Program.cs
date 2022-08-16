@@ -1,6 +1,38 @@
 var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+builder.Services.AddMvc();
 
-app.MapGet("/", () => "Hello World!");
+var app = builder.Build();
+app.UseStaticFiles();
+if(app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();    
+}
+
+app.UseRouting();
+
+
+app.MapControllerRoute(
+    name: "default",
+    pattern:"{controller=Home}/{action=Index}/{id?}");
+
+//app.MapControllerRoute(
+//    name: "home",
+//    pattern: "home",
+//    defaults: new { controller = "Home", action = "Index" });
+
+app.MapControllerRoute(
+    name: "about",
+    pattern: "about",
+    defaults: new {controller ="Home", action="About" });
+app.MapControllerRoute(
+    name: "contact",
+    pattern: "contact",
+    defaults: new { controller = "Home", action = "Contact" });
+app.MapControllerRoute(
+    name: "projects",
+    pattern: "projects",
+    defaults: new { controller = "Home", action = "Projects" });
+
+//app.MapDefaultControllerRoute();
 
 app.Run();

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/css-grid.css" rel="stylesheet">
+</head>
+<body>
+     <div class="grid-container">
+        <nav class="navbar" >
+           <img id="siteLogo" src ="css/dragonflyDrawing.jpg"/>
+            <ul class="menu-items">
+                <li><a href="about" id="About">About</a></li>
+                <li><a href="contact" id="Contact">Contact</a></li>
+                <li><a href="projects" id="Projects">Projects</a></li>
+            </ul>
+        </nav>
+        <div class= "main-content">
+             @RenderBody()
+        </div>
+        <div class="footer">
+            <span>&#169  Maria Jakobsson @DateTime.Now.ToString("yy-MM-dd")</span>
+        </div> 
+     </div>
+</body>
+</html>
