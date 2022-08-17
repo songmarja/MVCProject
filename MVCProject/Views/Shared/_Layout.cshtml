@@ -4,13 +4,13 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/css-grid.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/css/css-grid.css" rel="stylesheet">
 </head>
 <body>
      <div class="grid-container">
         <nav class="navbar" >
-           <img id="siteLogo" src ="css/dragonflyDrawing.jpg"/>
+           <img id="siteLogo" src ="~/css/dragonflyDrawing.jpg"/>
             <ul class="menu-items">
                @* <li><a href="about" id="About">About</a></li>*@
                <li><a  asp-controller ="Home" asp-action ="Index">Home</a></li>
@@ -18,6 +18,7 @@
                 <li><a asp-controller = "Home" asp-action = "Contact">Contact</a></li>
                @* <li><a href="projects" id="Projects">Projects</a></li>*@
                  <li><a asp-controller = "Home" asp-action = "Projects">Projects</a></li>
+                  <li><a asp-controller = "Doctor" asp-action = "FeverCheck">Check Fever</a></li>
             </ul>
         </nav>
         <div class= "main-content">

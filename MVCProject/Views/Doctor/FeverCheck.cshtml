@@ -8,10 +8,14 @@
 <body>
       <div class="main-content">
           <form asp-action="FeverCheck" method="post">
-              <label for="temperature">Enter your temperature:</label>
-              <input type="number" step ="0.01" min=0 id="temperature" />
+              <label >Enter your temperature (°C):</label>
+              <input type="number" step ="0.1"  name="temperature" required ="required" />
               <input type="submit" value="Fever check" />
           </form>
-      </div>
+          @if(ViewBag.Message!=null)
+        {
+            <p>@ViewBag.Message</p>
+        }
+    </div>
          
 </body>

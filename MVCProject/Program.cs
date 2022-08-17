@@ -33,6 +33,11 @@ app.MapControllerRoute(
     pattern: "projects",
     defaults: new { controller = "Home", action = "Projects" });
 
+app.MapControllerRoute(
+    name: "fevercheck",
+    pattern: "fevercheck",
+    defaults: new { controller = "Doctor", action = "FeverCheck" });
+
 //app.MapDefaultControllerRoute();
 
 app.Run();
