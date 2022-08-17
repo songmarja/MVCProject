@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "FeverCheck";
+}
+
+<h1>Doctor</h1>
+
+<body>
+      <div class="main-content">
+          <form asp-action="FeverCheck" method="post">
+              <label for="temperature">Enter your temperature:</label>
+              <input type="number" step ="0.01" min=0 id="temperature" />
+              <input type="submit" value="Fever check" />
+          </form>
+      </div>
+         
+</body>

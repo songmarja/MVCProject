@@ -12,9 +12,12 @@
         <nav class="navbar" >
            <img id="siteLogo" src ="css/dragonflyDrawing.jpg"/>
             <ul class="menu-items">
-                <li><a href="about" id="About">About</a></li>
-                <li><a href="contact" id="Contact">Contact</a></li>
-                <li><a href="projects" id="Projects">Projects</a></li>
+               @* <li><a href="about" id="About">About</a></li>*@
+               <li><a  asp-controller ="Home" asp-action ="Index">Home</a></li>
+                 <li><a  asp-controller ="Home" asp-action ="About">About</a></li>
+                <li><a asp-controller = "Home" asp-action = "Contact">Contact</a></li>
+               @* <li><a href="projects" id="Projects">Projects</a></li>*@
+                 <li><a asp-controller = "Home" asp-action = "Projects">Projects</a></li>
             </ul>
         </nav>
         <div class= "main-content">
