@@ -8,25 +8,25 @@
     <link href="~/css/css-grid.css" rel="stylesheet">
 </head>
 <body>
-     <div class="grid-container">
-        <nav class="navbar" >
-           <img id="siteLogo" src ="~/css/dragonflyDrawing.jpg"/>
+    <div class="grid-container">
+        <nav class="navbar">
+            <img id="siteLogo" src="~/css/dragonflyDrawing.jpg" />
             <ul class="menu-items">
-               @* <li><a href="about" id="About">About</a></li>*@
-               <li><a  asp-controller ="Home" asp-action ="Index">Home</a></li>
-                 <li><a  asp-controller ="Home" asp-action ="About">About</a></li>
-                <li><a asp-controller = "Home" asp-action = "Contact">Contact</a></li>
-               @* <li><a href="projects" id="Projects">Projects</a></li>*@
-                 <li><a asp-controller = "Home" asp-action = "Projects">Projects</a></li>
-                  <li><a asp-controller = "Doctor" asp-action = "FeverCheck">Check Fever</a></li>
+                @* <li><a href="about" id="About">About</a></li> My old way...*@
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="About">About</a></li>
+                <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
+                <li><a asp-controller="Doctor" asp-action="FeverCheck">Check Fever</a></li>
+                <li><a asp-controller="Game" asp-action="GuessingGame">Number Game</a></li>
             </ul>
         </nav>
-        <div class= "main-content">
-             @RenderBody()
+        <div class="main-content">
+            @RenderBody()
         </div>
         <div class="footer">
             <span>&#169  Maria Jakobsson @DateTime.Now.ToString("yy-MM-dd")</span>
-        </div> 
-     </div>
+        </div>
+    </div>
 </body>
 </html>

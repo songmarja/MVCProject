@@ -23,7 +23,6 @@ namespace MVCProject.Models
                 {
                     return "You have fever. Go to bed!";
                 }
-
             }
         }
     }

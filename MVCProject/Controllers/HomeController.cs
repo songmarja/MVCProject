@@ -4,10 +4,6 @@ namespace MVCProject.Controllers
 {
     public class HomeController : Controller
     {
-        //public IActionResult Home()
-        //{
-        //    return View();
-        //}
         public IActionResult Index()
         {
             return View();
