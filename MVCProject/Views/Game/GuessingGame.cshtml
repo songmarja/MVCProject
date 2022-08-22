@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "GuessingGame";
+}
+
+<h1>Welcome to Guess the Number</h1>
+<p>In this little game you should try to find out which number I think of.</p>
+<p> To help you a bit... It is between 1 and 100.</p>
+<p> And I'm going to tell you if the number is too high or too low.</p>
+<p> Ready??</p>
+<form asp-action="GuessingGame" method="post" autocomplete="off">
+    <label>Guess the number:</label>
+    <input type="text" name="input" />
+    <input type="submit" value="Check" />
+</form>
+
+@{
+    if (ViewBag.Message != null)
+    {
+        if(ViewBag.NewGame == true)
+        {
+            <p>@ViewBag.Message</p>
+            <p>We have started a new game for you.</p>
+        }
+        else
+        {
+             <p>@ViewBag.Message</p>
+        }
+    }
+}
+

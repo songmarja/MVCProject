@@ -7,7 +7,7 @@ namespace MVCProject.Models
     {
         public static string CheckTemperature(string temp)
         {
-            Debug.WriteLine("temperature = " + temp);
+            //Debug.WriteLine("temperature = " + temp);
             float temperature = float.Parse(temp, CultureInfo.InvariantCulture.NumberFormat);
             if (temperature > 35 && temperature < 37.5)
             {
@@ -23,7 +23,6 @@ namespace MVCProject.Models
                 {
                     return "You have fever. Go to bed!";
                 }
-
             }
         }
     }

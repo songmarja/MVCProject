@@ -24,7 +24,7 @@
 }
 .main-content {
     grid-area: main-content;
-    gap: 25px;
+   /* gap: 25px;*/
    /* display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "main-text ";*/

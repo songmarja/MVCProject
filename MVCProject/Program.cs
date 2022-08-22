@@ -1,7 +1,12 @@
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddMvc();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(10);
+});
 
 var app = builder.Build();
+app.UseSession();
 app.UseStaticFiles();
 if(app.Environment.IsDevelopment())
 {
@@ -14,11 +19,6 @@ app.UseRouting();
 app.MapControllerRoute(
     name: "default",
     pattern:"{controller=Home}/{action=Index}/{id?}");
-
-//app.MapControllerRoute(
-//    name: "home",
-//    pattern: "home",
-//    defaults: new { controller = "Home", action = "Index" });
 
 app.MapControllerRoute(
     name: "about",
@@ -37,6 +37,11 @@ app.MapControllerRoute(
     name: "fevercheck",
     pattern: "fevercheck",
     defaults: new { controller = "Doctor", action = "FeverCheck" });
+
+app.MapControllerRoute(
+    name: "guessingGame",
+    pattern: "GuessingGame",
+    defaults: new { controller = "Game", action = "GuessingGame" });
 
 //app.MapDefaultControllerRoute();
 
